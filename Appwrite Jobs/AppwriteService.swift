@@ -12,6 +12,7 @@ import Appwrite
 class AppwriteService {
     private(set) var client: Client
     private(set) var account: Account
+    private(set) var database: Database
     
     static let shared = AppwriteService()
     
@@ -21,6 +22,7 @@ class AppwriteService {
             .setProject("615d75f94461f")
         
         account = Account(client)
+        database = Database(client)
     }
     
 }

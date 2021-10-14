@@ -9,13 +9,15 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var authVM: AuthViewModel
+    let jobsVM: JobsViewModel = JobsViewModel()
     
     var body: some View {
         NavigationView {
             
             VStack(spacing: 20) {
-                JobItemView()
-                JobItemView()
+                ForEach(jobsVM.jobs) { job in
+                    JobItemView()
+                }
             }
             .padding(.horizontal)
             .navigationTitle("Appwrite Jobs")

@@ -24,6 +24,7 @@
 		C1EE83862714150F00BCF5A1 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE83852714150E00BCF5A1 /* SignupView.swift */; };
 		C1F22887271831030039BBB1 /* AppwriteLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F22886271831030039BBB1 /* AppwriteLogo.swift */; };
 		C1F2288A271831FA0039BBB1 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F22889271831FA0039BBB1 /* Job.swift */; };
+		C1F2288C271839890039BBB1 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2288B271839890039BBB1 /* JobsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C1EE83852714150E00BCF5A1 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		C1F22886271831030039BBB1 /* AppwriteLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppwriteLogo.swift; sourceTree = "<group>"; };
 		C1F22889271831FA0039BBB1 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		C1F2288B271839890039BBB1 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				C10FB0E7270DA34600BD9F9D /* AuthViewModel.swift */,
+				C1F2288B271839890039BBB1 /* JobsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				C10FB0E8270DA34600BD9F9D /* AuthViewModel.swift in Sources */,
 				C1F22887271831030039BBB1 /* AppwriteLogo.swift in Sources */,
 				C10FB0E6270D7F3400BD9F9D /* LoginView.swift in Sources */,
+				C1F2288C271839890039BBB1 /* JobsViewModel.swift in Sources */,
 				C10FB0BE270D7EFE00BD9F9D /* MainView.swift in Sources */,
 				C1EB9DA3270EDD8700228A39 /* JobDetailsView.swift in Sources */,
 				C1BE3797270DB01300F1803A /* HomeView.swift in Sources */,

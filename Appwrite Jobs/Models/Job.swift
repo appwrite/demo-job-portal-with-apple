@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Job {
+class Job: Identifiable {
     public let id: String
     public let title: String
     public let link: String
