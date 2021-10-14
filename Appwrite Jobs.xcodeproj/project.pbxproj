@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C10FB0BC270D7EFE00BD9F9D /* Appwrite_JobsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10FB0BB270D7EFE00BD9F9D /* Appwrite_JobsApp.swift */; };
-		C10FB0BE270D7EFE00BD9F9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10FB0BD270D7EFE00BD9F9D /* ContentView.swift */; };
+		C10FB0BE270D7EFE00BD9F9D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10FB0BD270D7EFE00BD9F9D /* MainView.swift */; };
 		C10FB0C0270D7EFF00BD9F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10FB0BF270D7EFF00BD9F9D /* Assets.xcassets */; };
 		C10FB0C3270D7EFF00BD9F9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10FB0C2270D7EFF00BD9F9D /* Preview Assets.xcassets */; };
 		C10FB0CD270D7F0000BD9F9D /* Appwrite_JobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10FB0CC270D7F0000BD9F9D /* Appwrite_JobsTests.swift */; };
 		C10FB0D7270D7F0000BD9F9D /* Appwrite_JobsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10FB0D6270D7F0000BD9F9D /* Appwrite_JobsUITests.swift */; };
 		C10FB0D9270D7F0000BD9F9D /* Appwrite_JobsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10FB0D8270D7F0000BD9F9D /* Appwrite_JobsUITestsLaunchTests.swift */; };
+		C10FB0E6270D7F3400BD9F9D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10FB0E5270D7F3400BD9F9D /* LoginView.swift */; };
+		C10FB0E8270DA34600BD9F9D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10FB0E7270DA34600BD9F9D /* AuthViewModel.swift */; };
+		C10FB0EC270DA42000BD9F9D /* AppwriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10FB0EB270DA42000BD9F9D /* AppwriteService.swift */; };
+		C10FB0EF270DA4D700BD9F9D /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = C10FB0EE270DA4D700BD9F9D /* Appwrite */; };
+		C1BE3797270DB01300F1803A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BE3796270DB01300F1803A /* HomeView.swift */; };
+		C1EB9DA1270EDD7700228A39 /* JobItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EB9DA0270EDD7700228A39 /* JobItemView.swift */; };
+		C1EB9DA3270EDD8700228A39 /* JobDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EB9DA2270EDD8700228A39 /* JobDetailsView.swift */; };
+		C1EE83862714150F00BCF5A1 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE83852714150E00BCF5A1 /* SignupView.swift */; };
+		C1F22887271831030039BBB1 /* AppwriteLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F22886271831030039BBB1 /* AppwriteLogo.swift */; };
+		C1F2288A271831FA0039BBB1 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F22889271831FA0039BBB1 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,7 @@
 /* Begin PBXFileReference section */
 		C10FB0B8270D7EFE00BD9F9D /* Appwrite Jobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Appwrite Jobs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10FB0BB270D7EFE00BD9F9D /* Appwrite_JobsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appwrite_JobsApp.swift; sourceTree = "<group>"; };
-		C10FB0BD270D7EFE00BD9F9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C10FB0BD270D7EFE00BD9F9D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C10FB0BF270D7EFF00BD9F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C10FB0C2270D7EFF00BD9F9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C10FB0C8270D7F0000BD9F9D /* Appwrite JobsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Appwrite JobsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +54,15 @@
 		C10FB0D2270D7F0000BD9F9D /* Appwrite JobsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Appwrite JobsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10FB0D6270D7F0000BD9F9D /* Appwrite_JobsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appwrite_JobsUITests.swift; sourceTree = "<group>"; };
 		C10FB0D8270D7F0000BD9F9D /* Appwrite_JobsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appwrite_JobsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C10FB0E5270D7F3400BD9F9D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C10FB0E7270DA34600BD9F9D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C10FB0EB270DA42000BD9F9D /* AppwriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppwriteService.swift; sourceTree = "<group>"; };
+		C1BE3796270DB01300F1803A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C1EB9DA0270EDD7700228A39 /* JobItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobItemView.swift; sourceTree = "<group>"; };
+		C1EB9DA2270EDD8700228A39 /* JobDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsView.swift; sourceTree = "<group>"; };
+		C1EE83852714150E00BCF5A1 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		C1F22886271831030039BBB1 /* AppwriteLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppwriteLogo.swift; sourceTree = "<group>"; };
+		C1F22889271831FA0039BBB1 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C10FB0EF270DA4D700BD9F9D /* Appwrite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +114,11 @@
 		C10FB0BA270D7EFE00BD9F9D /* Appwrite Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				C1F22888271831E80039BBB1 /* Models */,
+				C10FB0EB270DA42000BD9F9D /* AppwriteService.swift */,
+				C10FB0EA270DA36200BD9F9D /* Views */,
+				C10FB0E9270DA35100BD9F9D /* ViewModels */,
 				C10FB0BB270D7EFE00BD9F9D /* Appwrite_JobsApp.swift */,
-				C10FB0BD270D7EFE00BD9F9D /* ContentView.swift */,
 				C10FB0BF270D7EFF00BD9F9D /* Assets.xcassets */,
 				C10FB0C1270D7EFF00BD9F9D /* Preview Content */,
 			);
@@ -127,6 +150,36 @@
 			path = "Appwrite JobsUITests";
 			sourceTree = "<group>";
 		};
+		C10FB0E9270DA35100BD9F9D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C10FB0E7270DA34600BD9F9D /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C10FB0EA270DA36200BD9F9D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C10FB0E5270D7F3400BD9F9D /* LoginView.swift */,
+				C1F22886271831030039BBB1 /* AppwriteLogo.swift */,
+				C10FB0BD270D7EFE00BD9F9D /* MainView.swift */,
+				C1BE3796270DB01300F1803A /* HomeView.swift */,
+				C1EB9DA0270EDD7700228A39 /* JobItemView.swift */,
+				C1EB9DA2270EDD8700228A39 /* JobDetailsView.swift */,
+				C1EE83852714150E00BCF5A1 /* SignupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1F22888271831E80039BBB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1F22889271831FA0039BBB1 /* Job.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +196,9 @@
 			dependencies = (
 			);
 			name = "Appwrite Jobs";
+			packageProductDependencies = (
+				C10FB0EE270DA4D700BD9F9D /* Appwrite */,
+			);
 			productName = "Appwrite Jobs";
 			productReference = C10FB0B8270D7EFE00BD9F9D /* Appwrite Jobs.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +271,9 @@
 				Base,
 			);
 			mainGroup = C10FB0AF270D7EFE00BD9F9D;
+			packageReferences = (
+				C10FB0ED270DA4D700BD9F9D /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
+			);
 			productRefGroup = C10FB0B9270D7EFE00BD9F9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +316,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C10FB0BE270D7EFE00BD9F9D /* ContentView.swift in Sources */,
+				C1EE83862714150F00BCF5A1 /* SignupView.swift in Sources */,
+				C10FB0E8270DA34600BD9F9D /* AuthViewModel.swift in Sources */,
+				C1F22887271831030039BBB1 /* AppwriteLogo.swift in Sources */,
+				C10FB0E6270D7F3400BD9F9D /* LoginView.swift in Sources */,
+				C10FB0BE270D7EFE00BD9F9D /* MainView.swift in Sources */,
+				C1EB9DA3270EDD8700228A39 /* JobDetailsView.swift in Sources */,
+				C1BE3797270DB01300F1803A /* HomeView.swift in Sources */,
+				C1F2288A271831FA0039BBB1 /* Job.swift in Sources */,
+				C10FB0EC270DA42000BD9F9D /* AppwriteService.swift in Sources */,
 				C10FB0BC270D7EFE00BD9F9D /* Appwrite_JobsApp.swift in Sources */,
+				C1EB9DA1270EDD7700228A39 /* JobItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +501,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.appwrite.Appwrite-Jobs";
+				PRODUCT_BUNDLE_IDENTIFIER = io.appwrite.appwriteJobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -463,7 +531,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.appwrite.Appwrite-Jobs";
+				PRODUCT_BUNDLE_IDENTIFIER = io.appwrite.appwriteJobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -607,6 +675,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C10FB0ED270DA4D700BD9F9D /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appwrite/sdk-for-apple";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C10FB0EE270DA4D700BD9F9D /* Appwrite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C10FB0ED270DA4D700BD9F9D /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
+			productName = Appwrite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C10FB0B0270D7EFE00BD9F9D /* Project object */;
 }
