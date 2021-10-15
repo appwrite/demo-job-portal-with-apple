@@ -10,43 +10,75 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var isActiveSignup = false
     
     @EnvironmentObject var authVM: AuthViewModel
     
     var body: some View {
         
-        VStack {
-            Text("Welcome back to\nFlAppwrite Jobs")
-                .font(.largeTitle)
-                .multilineTextAlignment(.leading)
-            
-            Text("Let's sign in.")
-                .font(.largeTitle)
-                .padding()
-            
-            TextField("Email", text: self.$email)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(20.0)
-            
-            SecureField("Password", text: self.$password)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(20.0)
-            
-            Button("Sign in") {
-                authVM.loginAnonymous()
+        NavigationView {
+            AppwriteLogo {
+                VStack {
+                    NavigationLink(destination: SignupView(), isActive: $isActiveSignup) {
+                        EmptyView()
+                    }
+                    HStack {
+                        Text("Welcome back to\nFlAppwrite Jobs")
+                            .largeSemiBoldFont()
+                            .padding(.bottom)
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }
+                    .padding(.top, 60)
+                    
+                    HStack {
+                        Text("Let's sign in.")
+                            .largeLightFont()
+                        Spacer()
+                    }
+                    
+                    TextField("E-mail", text: self.$email)
+                        .padding()
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(16.0)
+                    
+                    SecureField("Password", text: self.$password)
+                        .padding()
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(16.0)
+                    
+                    Button("Login") {
+                        authVM.login(email: email, password: password)
+                    }
+                    .regularFont()
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: 300, height: 50)
+                    .background(Color.pink)
+                    .cornerRadius(16.0)
+                    
+                    HStack {
+                        Text("Anonymous Login")
+                            .onTapGesture {
+                                authVM.loginAnonymous()
+                            }
+                        Text(".")
+                        Text("Signup")
+                            .onTapGesture {
+                                isActiveSignup = true
+                            }
+                    }
+                    .regularFont()
+                    Spacer()
+                    
+                }
+                .foregroundColor(.white)
+                .padding([.leading, .trailing], 40)
+                
             }
-            .font(.headline)
-            .foregroundColor(.white)
-            .padding()
-            .frame(width: 300, height: 50)
-            .background(Color.pink)
-            .cornerRadius(20.0)
-            
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
         }
-        .foregroundColor(.white)
-        .padding([.leading, .trailing], 27.5)
     }
 }
 

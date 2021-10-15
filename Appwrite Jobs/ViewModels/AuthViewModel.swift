@@ -40,6 +40,7 @@ class AuthViewModel: ObservableObject {
             switch result {
             case .failure(let err):
                 DispatchQueue.main.async {
+                    print(err.message)
                     self.error = err.message
                 }
             case .success:

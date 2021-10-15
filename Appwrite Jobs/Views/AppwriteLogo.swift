@@ -7,14 +7,40 @@
 
 import SwiftUI
 
-struct AppwriteLogo: View {
+struct AppwriteLogo<Content: View>: View {
+    
+    @ViewBuilder var content: Content
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack {
+                HStack {
+                    Spacer()
+                    Image("bg")
+                }
+                Spacer()
+            }.ignoresSafeArea()
+            content
+            VStack (alignment: .trailing){
+                Spacer()
+                HStack {
+                    Spacer()
+                    Image("built-with-appwrite")
+                        .resizable()
+                        .frame(width: 132, height: 90)
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
 struct AppwriteLogo_Previews: PreviewProvider {
     static var previews: some View {
-        AppwriteLogo()
+        AppwriteLogo() {
+            Text("Hello Appwrite")
+        }
+            .preferredColorScheme(.dark)
     }
 }

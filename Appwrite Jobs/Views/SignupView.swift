@@ -13,41 +13,68 @@ struct SignupView: View {
     @State private var name = ""
     
     @EnvironmentObject var authVM: AuthViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack {
-            Text("Login")
-                .font(.largeTitle)
-                .padding()
+        AppwriteLogo {
             
-            
-            TextField("Name", text: self.$name)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(20.0)
-            
-            TextField("Email", text: self.$email)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(20.0)
-            
-            SecureField("Password", text: self.$password)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(20.0)
-            
-            Button("create account") {
-                authVM.create(name: name, email: email, password: password)
-            }
-            .font(.headline)
-            .foregroundColor(.white)
-            .padding()
-            .frame(width: 300, height: 50)
-            .background(Color.pink)
-            .cornerRadius(20.0)
+            VStack {
+                HStack {
+                    Image("back-icon")
+                        .resizable()
+                        .frame(width: 24, height: 21)
+                        .onTapGesture {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    Spacer()
+                }
+                .padding([.top, .bottom], 30)
                 
+                HStack {
+                    Text("Join\nFlAppwrite jobs")
+                        .largeSemiBoldFont()
+                        .padding(.bottom)
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("Create an account")
+                        .largeLightFont()
+                        .padding(.bottom)
+                    Spacer()
+                }
+                
+                
+                TextField("Name", text: self.$name)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(16.0)
+                
+                TextField("E-mail", text: self.$email)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(16.0)
+                
+                SecureField("Password", text: self.$password)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(16.0)
+                
+                Button("Create account") {
+                    authVM.create(name: name, email: email, password: password)
+                }
+                .regularFont()
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 300, height: 60)
+                .background(Color.pink)
+                .cornerRadius(16.0)
+                
+                Spacer()
+            }
+            .padding([.leading, .trailing], 27.5)
+            .navigationBarHidden(true)
         }
-        .padding([.leading, .trailing], 27.5)
     }
 }
 

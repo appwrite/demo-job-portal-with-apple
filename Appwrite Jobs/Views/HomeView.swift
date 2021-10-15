@@ -9,19 +9,46 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var authVM: AuthViewModel
-    let jobsVM: JobsViewModel = JobsViewModel()
+    @ObservedObject var jobsVM: JobsViewModel = JobsViewModel()
     
     var body: some View {
         NavigationView {
-            
-            VStack(spacing: 20) {
-                ForEach(jobsVM.jobs) { job in
-                    JobItemView()
+            AppwriteLogo {
+                VStack {
+                    HStack {
+                        Text("FlAppwrite Jobs")
+                            .font(.custom("Poppins", size: 16))
+                            .fontWeight(.bold)
+                        Spacer()
+                        Text("Logout")
+                            .font(.custom("Poppins", size: 16))
+                            .onTapGesture {
+                                authVM.logout()
+                            }
+                    }
+                    .padding(.top, 40)
+                    .padding(.horizontal, 36)
+                    
+                    ScrollView {
+                        HStack {
+                            Text("Find your dream\nFlutter job")
+                                .largeSemiBoldFont()
+                            Spacer()
+                        }
+                        .padding(.vertical, 30)
+                        .padding(.horizontal, 36)
+                        
+                        ForEach(jobsVM.jobs) { job in
+                            JobItemView(job)
+                                .padding(.vertical, 12)
+                                .padding(.horizontal, 36)
+                        }
+                        
+                        
+                    }
                 }
+                .navigationBarHidden(true)
             }
-            .padding(.horizontal)
-            .navigationTitle("Appwrite Jobs")
-            .navigationBarItems(trailing: actions)
         }
     }
     

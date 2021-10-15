@@ -15,7 +15,7 @@ class JobsViewModel: ObservableObject {
     }
     
     func getJobs() {
-        AppwriteService.shared.database.listDocuments(collectionId: "615ec687829fa") {
+        AppwriteService.shared.database.listDocuments(collectionId: "615ec687829fa", orderField: "company", orderType: "ASC") {
             result in
             DispatchQueue.main.async {
                 switch result {
