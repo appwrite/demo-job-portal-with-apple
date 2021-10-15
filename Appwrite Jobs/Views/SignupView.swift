@@ -17,7 +17,6 @@ struct SignupView: View {
     
     var body: some View {
         AppwriteLogo {
-            
             VStack {
                 HStack {
                     Image("back-icon")
@@ -33,9 +32,10 @@ struct SignupView: View {
                 HStack {
                     Text("Join\nFlAppwrite jobs")
                         .largeSemiBoldFont()
-                        .padding(.bottom)
                     Spacer()
                 }
+                
+                Spacer().frame(height: 10)
                 
                 HStack {
                     Text("Create an account")
@@ -43,7 +43,7 @@ struct SignupView: View {
                         .padding(.bottom)
                     Spacer()
                 }
-                
+                .padding(.bottom, 30)
                 
                 TextField("Name", text: self.$name)
                     .padding()
@@ -59,14 +59,14 @@ struct SignupView: View {
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(16.0)
-                
+                Spacer().frame(height: 16)
                 Button("Create account") {
                     authVM.create(name: name, email: email, password: password)
                 }
                 .regularFont()
                 .foregroundColor(.white)
                 .padding()
-                .frame(width: 300, height: 60)
+                .frame( maxWidth: .infinity, maxHeight: 60)
                 .background(Color.pink)
                 .cornerRadius(16.0)
                 

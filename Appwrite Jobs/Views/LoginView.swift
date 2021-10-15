@@ -25,17 +25,17 @@ struct LoginView: View {
                     HStack {
                         Text("Welcome back to\nFlAppwrite Jobs")
                             .largeSemiBoldFont()
-                            .padding(.bottom)
+                            .padding(.top, 60)
                             .multilineTextAlignment(.leading)
                         Spacer()
                     }
-                    .padding(.top, 60)
-                    
+                    Spacer().frame(height: 10)
                     HStack {
                         Text("Let's sign in.")
                             .largeLightFont()
                         Spacer()
                     }
+                    .padding(.bottom, 30)
                     
                     TextField("E-mail", text: self.$email)
                         .padding()
@@ -46,6 +46,8 @@ struct LoginView: View {
                         .padding()
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(16.0)
+                    
+                    Spacer().frame(height: 16)
                     
                     Button("Login") {
                         authVM.login(email: email, password: password)
@@ -69,6 +71,7 @@ struct LoginView: View {
                             }
                     }
                     .regularFont()
+                    .padding(.top, 30)
                     Spacer()
                     
                 }

@@ -43,8 +43,6 @@ struct HomeView: View {
                                 .padding(.vertical, 12)
                                 .padding(.horizontal, 36)
                         }
-                        
-                        
                     }
                 }
                 .navigationBarHidden(true)

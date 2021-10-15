@@ -29,7 +29,7 @@ struct JobItemView: View {
                     KFImage.url(URL(string: job.logo))
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 60)
+                        .frame(height: 50)
                 }
                 .frame(width: 86, height: 82)
                 

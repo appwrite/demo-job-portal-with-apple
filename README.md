@@ -2,6 +2,8 @@
 
 A simple Job Portal App built with Swift UI and Appwrite
 
+<img src="1.png" height="480" /> <img src="2.png" height="480" /> <img src="3.png" height="480" />
+
 ## 🎬 Getting Started
 
 ### 🤘 Install Appwrite 
