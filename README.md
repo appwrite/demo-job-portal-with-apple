@@ -14,6 +14,10 @@ We need to make a few configuration changes to your Appwrite server.
 1. Add a new Apple App (iOS) in Appwrite and enter application id of your application (`io.appwrite.jobportal` etc)
 2. Create a new collection with the following rules
 
+![create collection](create-collection.png)
+
+Also set the read permission to `*` so that anyone can read. You can also add few documents to display in the app.
+
 ### 🚀 Run the Application
 
 3. Open the project in XCode
