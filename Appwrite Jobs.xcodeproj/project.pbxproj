@@ -725,8 +725,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/appwrite/sdk-for-apple";
 			requirement = {
-				branch = dev;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
 			};
 		};
 		C13662762719731A00A584E7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
